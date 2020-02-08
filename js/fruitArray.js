@@ -1,81 +1,123 @@
 // Create an array of fruits and show them in the html page...
 // fruits image should have name under it
-// store fruit data in a structure
+// store fruit data in a structure (object)
 // list -> Arrays of objects
 
 var apple = {
-  imgSource: 'images/apple.jpeg',
-  name: 'Apple'
-}
+  imgSource: "images/apple.jpg",
+  color: 100,
+  width: 100,
+  name: "Apple"
+};
 
 var banana = {
-  imgSource: 'images/banana.jpeg',
-  name: 'Banana'
-}
+  imgSource: "images/banana.png",
+  height: 100,
+  width: 100,
+  name: "Banana"
+};
 
 var blueberry = {
   imgSource: "images/blueberry.svg",
   height: 100,
   width: 100,
-  name: 'Blueberry'
-}
+  name: "Blueberry"
+};
 
-var grapes = {
-  imgSource: 'images/grapes.png',
+var orange = {
+  imgSource: "images/apple.jpg",
+  color: 100,
+  width: 100,
+  name: "Apple"
+};
+
+var pear = {
+  imgSource: "images/banana.png",
   height: 100,
   width: 100,
-  name: 'Grapes',
+  name: "Banana"
+};
+
+var pineapple = {
+  imgSource: "images/blueberry.svg",
+  height: 100,
+  width: 100,
+  name: "Blueberry"
+};
+
+var watermelon = {
+  imgSource: "images/blueberry.svg",
+  height: 100,
+  width: 100,
+  name: "Blueberry"
+};
+
+var grapes = {
+  imgSource: "images/grapes.png",
+  height: 100,
+  width: 100,
+  name: "Grapes",
   showName: function() {
-    console.log(this.name);
     return this.name;
+  }
+};
+
+// list of fruits - Global variables
+var fruitArray = [
+  apple,
+  banana,
+  blueberry,
+  grapes,
+  orange,
+  watermelon,
+  pear,
+  pineapple
+];
+
+// takes list of fruit object => creates fruit gallery
+function createFruitGallery(fruitArray) {
+  // local variables
+  var mainContainer = document.getElementById("container");
+  // pick a div from html to show the fruit gallery
+  // loop thru the fruit array
+  for (var i = 0; i < fruitArray.length; i++) {
+    // setting up the fruit image element
+    var myFruitContainerCreated = setupFruitContainer();
+    // giving each fruit item to this setImage function
+    // setuupImageElement function takes a fruit and adds it to the fruitDiv in the DOM...
+    setupImageElement(fruitArray[i], myFruitContainerCreated); // apple - banana - blueberry
+    appendFruitContainerToMainContainer(mainContainer, myFruitContainerCreated);
   }
 }
 
-var fruitArray = [apple, banana, blueberry, grapes];
-
-// grab a div from html
-var container = document.getElementById("container");
-
-// Add the fruitDiv to container
-for (var i = 0; i < 10; i++) {
-  var fruitDiv = document.createElement("div"); // creating multiple divs child
-
-  
-  // Add class to fruitDiv styling fruit div here
-  fruitDiv.classList.add('fruit-container');
-//  var textnode = document.createTextNode("Water");
-
-myImage.src = blueberry.imgSource;
-myImage.height = blueberry.height;
-myImage.width = blueberry.width;
-
-myImage.src = grapes.imgSource;
-myImage.height = grapes.height;
-myImage.width = grapes.width;
-
- // Insert this image to Fruit container
-fruitDiv.appendChild(myImage);
-
-
-
-
-  container.appendChild(fruitDiv); // container is one time created its the parent
+function setupFruitContainer() {
+  var fruitContainer = document.createElement("div"); // creating multiple divs child
+  // Add class fruit-container to the fruitContainer
+  fruitContainer.classList.add("fruit-container");
+  return fruitContainer;
 }
-// creating image element n DOM
-var myImage = document.createElement('IMG');
-console.log(myImage);
-//***********************************************************
 
 //***********************************************************
-//why is this undefined ????                             // *
-console.log(grapes.showName()); //1 //2
-// what is the function giving back => return
-      // *
-  var catchMyFruit = grapes.showName(); //3
-  console.log(catchMyFruit); //4
+function setupImageElement(fruit, fruitContainer) {
+  // creating image element n DOM
+  var myImageElement = document.createElement("IMG");
+  // attach fruit props to image element
+  // adds properties to the fruit objects
+  myImageElement.src = fruit.imgSource;
+  myImageElement.height = fruit.height;
+  myImageElement.width = fruit.width;
+  // Insert this image to Fruit container
+  fruitContainer.appendChild(myImageElement);
+}
 //***********************************************************
 
-
-// create a box in html using js
-
-// render image inside the box
+function appendFruitContainerToMainContainer(
+  mainContainer,
+  myFruitContainerCreated
+) {
+  mainContainer.appendChild(myFruitContainerCreated);
+}
+createFruitGallery(fruitArray);
+//***********************************************************
+//**********************************************************
+console.log(tomato);

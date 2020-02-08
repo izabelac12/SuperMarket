@@ -1,34 +1,108 @@
-html, body {
+@import url("https://fonts.googleapis.com/css?family=Sriracha|Zhi+Mang+Xing&display=swap");
+
+html,
+body {
+  display: flex;
+  justify-content: center;
   margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
+  background-image: url("../images/stripbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Zhi Mang Xing", cursive;
+}
+
+h2 {
+  color: blue;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Sriracha", cursive;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
   height: 100%;
-  border: 5px solid hotpink;
 }
 
 .fruit-container {
-  display: inline-block;
-  height: 200px;
-  width: 250px;
-  border: 10px solid greenyellow;
-  background: #00F260;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0575E6, #00F260);
-  background: linear-gradient(to right, #0575E6, #00F260); 
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 75px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .fruit-container img {
   display: block;
-  height: 100%;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.jip-container {
+  display: inline-block;
+  height: 50px;
+  width: 150px;
+  background: yellow;
+  border-radius: 50px;
+  position: absolute;
+  top: 10px;
+  left: 52%;
+}
+
+.fruit-container-wrapper {
+  width: 500px;
+  border: 10px solid rgb(43, 42, 42);
+}
+
+.racks {
   width: 100%;
 }
 
-.fruitDiv {
-  height: 60px;
-  width: 60px;
-  border: 10px solid deepskyblue;
+.racks img {
+  display: block;
+  width: 100%;
+}
+
+.fruit-container-wrapper-position {
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px solid rgb(43, 42, 42);
+}
+
+.conveyor {
+  height: 200px;
+}
+
+.conveyor img {
+  width: 100%;
+  height: 100%;
+}
+.cash-register img {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.door {
+  margin-top: 50px;
 }
