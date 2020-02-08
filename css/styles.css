@@ -1,0 +1,34 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 100vw;
+  height: 100%;
+  border: 5px solid hotpink;
+}
+
+.fruit-container {
+  display: inline-block;
+  height: 200px;
+  width: 250px;
+  border: 10px solid greenyellow;
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);
+  background: linear-gradient(to right, #0575E6, #00F260); 
+}
+
+.fruit-container img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.fruitDiv {
+  height: 60px;
+  width: 60px;
+  border: 10px solid deepskyblue;
+}
