@@ -31,27 +31,6 @@ var orange = {
   name: "Apple"
 };
 
-var pear = {
-  imgSource: "images/banana.png",
-  height: 100,
-  width: 100,
-  name: "Banana"
-};
-
-var pineapple = {
-  imgSource: "images/blueberry.svg",
-  height: 100,
-  width: 100,
-  name: "Blueberry"
-};
-
-var watermelon = {
-  imgSource: "images/blueberry.svg",
-  height: 100,
-  width: 100,
-  name: "Blueberry"
-};
-
 var grapes = {
   imgSource: "images/grapes.png",
   height: 100,
@@ -63,22 +42,16 @@ var grapes = {
 };
 
 // list of fruits - Global variables
-var fruitArray = [
-  apple,
-  banana,
-  blueberry,
-  grapes,
-  orange,
-  watermelon,
-  pear,
-  pineapple
-];
+var fruitArray = [apple, banana, blueberry, grapes];
+
+//***********************************************************
+// for fruit
+var mainContainer = document.getElementById("container");
+//***********************************************************
 
 // takes list of fruit object => creates fruit gallery
 function createFruitGallery(fruitArray) {
-  // local variables
-  var mainContainer = document.getElementById("container");
-  // pick a div from html to show the fruit gallery
+  console.log(JSON.stringify(fruitArray));
   // loop thru the fruit array
   for (var i = 0; i < fruitArray.length; i++) {
     // setting up the fruit image element
@@ -86,7 +59,7 @@ function createFruitGallery(fruitArray) {
     // giving each fruit item to this setImage function
     // setuupImageElement function takes a fruit and adds it to the fruitDiv in the DOM...
     setupImageElement(fruitArray[i], myFruitContainerCreated); // apple - banana - blueberry
-    appendFruitContainerToMainContainer(mainContainer, myFruitContainerCreated);
+    appendFruitContainerToMainContainer(myFruitContainerCreated);
   }
 }
 
@@ -111,13 +84,31 @@ function setupImageElement(fruit, fruitContainer) {
 }
 //***********************************************************
 
-function appendFruitContainerToMainContainer(
-  mainContainer,
-  myFruitContainerCreated
-) {
+function appendFruitContainerToMainContainer(myFruitContainerCreated) {
   mainContainer.appendChild(myFruitContainerCreated);
 }
-createFruitGallery(fruitArray);
+
 //***********************************************************
+createFruitGallery(fruitArray);
 //**********************************************************
-console.log(tomato);
+
+// var pear = {
+//   imgSource: "images/banana.png",
+//   height: 100,
+//   width: 100,
+//   name: "Banana"
+// };
+
+// var pineapple = {
+//   imgSource: "images/blueberry.svg",
+//   height: 100,
+//   width: 100,
+//   name: "Blueberry"
+// };
+
+// var watermelon = {
+//   imgSource: "images/blueberry.svg",
+//   height: 100,
+//   width: 100,
+//   name: "Blueberry"
+// };

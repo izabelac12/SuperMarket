@@ -1,29 +1,59 @@
 var broccoli = {
-  imgsource: "images/broccli.png",
+  imgSource: "images/broccoli.png",
+  height: 100,
+  width: 100,
   name: "broccoli"
 };
 
 var tomato = {
-  imgsource: "images/tomato.jpeg",
+  imgSource: "images/tomato.jpeg",
+  height: 100,
+  width: 100,
   name: "tomato"
 };
 
 var sweetCorn = {
-  imgsource: "images/sweetcorn.jpg",
+  imgSource: "images/sweetcorn.jpg",
+  height: 100,
+  width: 100,
   name: "sweetCorn"
 };
 
 var carrot = {
-  imgsource: "images/carrot.png",
+  imgSource: "images/carrot.png",
+  height: 100,
+  width: 100,
   name: "carrot"
 };
 
 var vegArray = [broccoli, tomato, sweetCorn, carrot];
+var mainContainer = document.getElementById("container");
 
-function createVegGallery() {
-  for (var i = 0; i < vegArray.length; i++) setUpVegContainer();
-}
+// function createVegGallery(vegArray) {
+//   for (var i = 0; i < vegArray.length; i++) {
+//     var vegContainerCreated = setupVegContainer();
+//     setupImageElement(vegArray[i], vegContainerCreated);
+//     appendVegContainerToMainContainer(mainContainer, vegContainerCreated);
+//   }
+// }
+// function setupVegContainer() {
+//   var vegContainer = document.createElement("div");
+//   vegContainer.classList.add("veg-container");
+//   return vegContainer;
+// }
 
-function setUpVegContainer() {
-  setupFruitContainer();
-}
+// function setupImageElement(vegitable, vegContainerCreated) {
+//   var myImageElement = document.createElement("IMG");
+
+//   myImageElement.src = vegitable.imgSource;
+//   myImageElement.height = vegitable.height;
+//   myImageElement.width = vegitable.width;
+
+//   vegContainerCreated.appendChild(myImageElement);
+// }
+// function appendVegContainerToMainContainer(mainContainer, vegContainerCreated) {
+//   mainContainer.appendChild(vegContainerCreated);
+// }
+// createVegGallery(vegArray);
+
+createFruitGallery(vegArray);
