@@ -2,28 +2,56 @@ var broccoli = {
   imgSource: "images/broccoli.png",
   height: 100,
   width: 100,
-  name: "broccoli"
+  info: {
+    name: "broccoli",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var tomato = {
   imgSource: "images/tomato.jpeg",
   height: 100,
   width: 100,
-  name: "tomato"
+  info: {
+    name: "tomato",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var sweetCorn = {
   imgSource: "images/sweetcorn.jpg",
   height: 100,
   width: 100,
-  name: "sweetCorn"
+  info: {
+    name: "sweetCorn",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var carrot = {
   imgSource: "images/carrot.png",
   height: 100,
   width: 100,
-  name: "carrot"
+  info: {
+    name: "carrot",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var vegArray = [broccoli, tomato, sweetCorn, carrot];

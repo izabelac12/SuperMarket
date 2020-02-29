@@ -2,46 +2,75 @@
 // fruits image should have name under it
 // store fruit data in a structure (object)
 // list -> Arrays of objects
-var bttn = document.createElement("button");
 
 var apple = {
   imgSource: "images/apple.jpg",
   color: 100,
   width: 100,
-  name: "Apple",
-  button: bttn
+  info: {
+    name: "Apple",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var banana = {
   imgSource: "images/banana.png",
   height: 100,
   width: 100,
-  name: "Banana",
-  button: bttn
+  info: {
+    name: "Banana",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var blueberry = {
   imgSource: "images/blueberry.svg",
   height: 100,
   width: 100,
-  name: "Blueberry",
-  button: bttn
+  info: {
+    name: "Blueberry",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var orange = {
   imgSource: "images/apple.jpg",
   color: 100,
   width: 100,
-  name: "Apple",
-  button: bttn
+  info: {
+    name: "orange",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  }
 };
 
 var grapes = {
   imgSource: "images/grapes.png",
   height: 100,
   width: 100,
-  name: "Grapes",
-  button: bttn,
+  info: {
+    name: "grapes",
+    origin: "Canada",
+    price: "20Kc",
+    quantityInStock: 20,
+    expiryDate: addDaysFromToday(7),
+    quantitySold: 0
+  },
   showName: function() {
     return this.name;
   }
@@ -63,7 +92,11 @@ function createFruitGallery(anyArray) {
   // loop thru the fruit array
   for (var i = 0; i < anyArray.length; i++) {
     // create container node to hold each fruit image
-    var myFruitContainerCreated = setupFruitContainer();
+    var myFruitContainerCreated = setupFruitContainer(anyArray[i]);
+
+    // Add click event listener to the Fruit Container
+    myFruitContainerCreated.addEventListener("click", handleFruitClick);
+
     // giving each fruit item to this setImage function
     // setupImageElement function takes a fruit and adds it to the fruitDiv in the DOM...
     setupImageElement(anyArray[i], myFruitContainerCreated); // apple - banana - blueberry
@@ -76,10 +109,16 @@ function createFruitGallery(anyArray) {
 }
 
 // creates a Dom node when called and gives back
-function setupFruitContainer() {
+function setupFruitContainer(currentFruit) {
   var fruitContainer = document.createElement("div"); // creating multiple dom nodes/divs child
   // Add class fruit-container to the fruitContainer
   fruitContainer.classList.add("fruit-container");
+  fruitContainer.setAttribute("data-fruitname", currentFruit.info.name);
+  fruitContainer.setAttribute("data-price", currentFruit.info.price);
+  fruitContainer.setAttribute("data-expiry", currentFruit.info.expiryDate);
+  fruitContainer.setAttribute("data-qstock", currentFruit.info.quantityInStock);
+  fruitContainer.setAttribute("data-qsold", currentFruit.info.quantitySold);
+  fruitContainer.setAttribute("data-origin", currentFruit.info.origin);
   return fruitContainer;
 }
 
@@ -92,7 +131,6 @@ function setupImageElement(fruit, fruitContainer) {
   myImageElement.src = fruit.imgSource;
   myImageElement.height = fruit.height;
   myImageElement.width = fruit.width;
-  myImageElement.button = fruit.bttn;
   // Insert this image to Fruit container
   fruitContainer.appendChild(myImageElement);
 }
