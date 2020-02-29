@@ -40,23 +40,17 @@ body {
 }
 
 .fruit-container-wrapper {
-  width: 400px;
-  border: 10px solid rgb(43, 42, 42);
-}
-
-.racks {
-  width: 100%;
-}
-
-.racks img {
-  display: block;
-  width: 100%;
-}
-
-.fruit-container-wrapper-position {
   display: flex;
   flex-wrap: wrap;
-  border: 10px solid rgb(43, 42, 42);
+  width: 400px;
+  height: 220px;
+}
+
+.rackSection {
+  display: flex;
+  border: 15px solid rgb(39, 38, 38);
+  width: 100%;
+  background: rebeccapurple;
 }
 
 .conveyor {
@@ -131,4 +125,19 @@ h2 {
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
+}
+
+.veg-container {
+  border: 2px solid yellowgreen;
+}
+
+.gaurdDog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.bttn-div {
+  border: 15px solid slateblue;
 }

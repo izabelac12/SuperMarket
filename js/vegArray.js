@@ -27,33 +27,26 @@ var carrot = {
 };
 
 var vegArray = [broccoli, tomato, sweetCorn, carrot];
-var mainContainer = document.getElementById("container");
+// var mainContainer = document.getElementById("container");
 
-// function createVegGallery(vegArray) {
-//   for (var i = 0; i < vegArray.length; i++) {
-//     var vegContainerCreated = setupVegContainer();
-//     setupImageElement(vegArray[i], vegContainerCreated);
-//     appendVegContainerToMainContainer(mainContainer, vegContainerCreated);
-//   }
-// }
-// function setupVegContainer() {
+// function setupVegContainer(mainContainer) {
 //   var vegContainer = document.createElement("div");
 //   vegContainer.classList.add("veg-container");
+//   mainContainer.appendChild(vegContainer);
+//   vegContainer.appendChild(vegArray);
 //   return vegContainer;
 // }
 
-// function setupImageElement(vegitable, vegContainerCreated) {
-//   var myImageElement = document.createElement("IMG");
-
-//   myImageElement.src = vegitable.imgSource;
-//   myImageElement.height = vegitable.height;
-//   myImageElement.width = vegitable.width;
-
-//   vegContainerCreated.appendChild(myImageElement);
-// }
-// function appendVegContainerToMainContainer(mainContainer, vegContainerCreated) {
-//   mainContainer.appendChild(vegContainerCreated);
-// }
-// createVegGallery(vegArray);
-
+// setupVegContainer(mainContainer);
+// console.log(vegArray);
 createFruitGallery(vegArray);
+
+// what do u want?
+// create a div
+// store array of veg/fruit in the div
+// add styles to div
+// add div to the DOM Tree otherwise it won't show up
+
+//create bttn
+// store the veg img in the button
+// add to the mainfunc
