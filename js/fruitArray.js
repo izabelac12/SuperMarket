@@ -112,6 +112,7 @@ function createFruitGallery(anyArray) {
 function setupFruitContainer(currentFruit) {
   var fruitContainer = document.createElement("div"); // creating multiple dom nodes/divs child
   // Add class fruit-container to the fruitContainer
+
   fruitContainer.classList.add("fruit-container");
   fruitContainer.setAttribute("data-fruitname", currentFruit.info.name);
   fruitContainer.setAttribute("data-price", currentFruit.info.price);
@@ -156,6 +157,7 @@ function createBttnDiv() {
   var bttnDiv = document.createElement("div");
   bttnDiv.classList.add("bttn-div");
 }
+
 // create a rackSection div
 // add the child divs to that div
 // add the rackSection to mainContainer

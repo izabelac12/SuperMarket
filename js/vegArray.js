@@ -18,7 +18,7 @@ var tomato = {
   width: 100,
   info: {
     name: "tomato",
-    origin: "Canada",
+    origin: "Peru",
     price: "20Kc",
     quantityInStock: 20,
     expiryDate: addDaysFromToday(7),
@@ -32,7 +32,7 @@ var sweetCorn = {
   width: 100,
   info: {
     name: "sweetCorn",
-    origin: "Canada",
+    origin: "Texas",
     price: "20Kc",
     quantityInStock: 20,
     expiryDate: addDaysFromToday(7),
@@ -46,8 +46,8 @@ var carrot = {
   width: 100,
   info: {
     name: "carrot",
-    origin: "Canada",
-    price: "20Kc",
+    origin: "Persia",
+    price: "24Kc",
     quantityInStock: 20,
     expiryDate: addDaysFromToday(7),
     quantitySold: 0
